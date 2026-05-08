@@ -214,8 +214,10 @@ function App() {
     try {
       const endpoint =
         mode === "plant"
-          ? "http://127.0.0.1:8000/plant-disease"
-          : "http://127.0.0.1:8000/seed-analysis";
+          ? "https://agromed.onrender.com/plant-disease"
+          : "https://agromed.onrender.com/seed-analysis";
+          // ? "http://127.0.0.1:8000/plant-disease"
+          // : "http://127.0.0.1:8000/seed-analysis";
       const response = await axios.post(endpoint, formData);
       setResult(response.data);
     } catch (error) {
